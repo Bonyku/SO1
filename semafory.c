@@ -7,6 +7,10 @@
 #include <sys/ipc.h>
 #include <sys/sem.h>
 #include <sys/wait.h>
+/* Polecenie: 
+	Stwórz dwa procesy - jeden niech utworzy semafor, ustawi wartosc na 1
+	i poczeka aż drugi proces zmieni ta wartosc na 0.
+*/
 
 void up_and_wait(int semset_id)
 {
@@ -26,9 +30,7 @@ void up_and_wait(int semset_id)
 
 void down(int semset_id)
 {
-
 	struct sembuf down_operation = {0,-1,0};
-
 	if(semop(semset_id,&down_operation,1)<0)
 		perror("semop");
 }
