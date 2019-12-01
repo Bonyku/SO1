@@ -73,7 +73,6 @@ void do_parent_work(int key)
 
 int main()
 {
-	srand(time(NULL));
 	int key = ftok("/tmp", 8);
 	if(key<0)
 		perror("ftok");
