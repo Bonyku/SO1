@@ -7,6 +7,7 @@
 #include <sys/ipc.h>
 #include <sys/sem.h>
 #include <sys/wait.h>
+
 /* Polecenie: 
 	Stwórz dwa procesy - jeden niech utworzy semafor, ustawi wartosc na 1
 	i poczeka aż drugi proces zmieni ta wartosc na 0.
